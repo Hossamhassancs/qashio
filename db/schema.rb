@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_21_014457) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_21_031420) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_21_014457) do
     t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["actor"], name: "index_movies_on_actor"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -33,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_21_014457) do
     t.string "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["stars"], name: "index_reviews_on_stars"
   end
 
 end

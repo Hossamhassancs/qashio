@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>search for actor</h1>
+<h3>search for actor</h3>
 <%= form_tag movies_path, :method => "get" do %>
 <%= label_tag(:search, "enter actor name you ant to search") %>
 <%= text_field_tag :search, params[:search_tag] %>

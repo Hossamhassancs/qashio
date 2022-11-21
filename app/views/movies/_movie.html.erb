@@ -20,6 +20,11 @@
   </p>
 
   <p>
+    <strong>actor:</strong>
+    <%= movie.actor %>
+  </p>
+
+  <p>
     <strong>Filming location:</strong>
     <%= movie.filming_location %>
   </p>
@@ -28,5 +33,18 @@
     <strong>Country:</strong>
     <%= movie.country %>
   </p>
+
+  <p>
+    <strong>avg stars:</strong>
+    <% stars = movie.reviews.pluck(:stars) %>
+    <%= stars.sum / (stars.count * 1.0 ) %>
+  </p>
+
+  <p>
+    <strong>reviews:</strong>
+    <% reviews = movie.reviews.pluck(:review) %>
+    <%= reviews %>
+  </p>
+
 
 </div>

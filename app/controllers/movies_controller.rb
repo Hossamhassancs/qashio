@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
 
   # GET /movies or /movies.json
   def index
-    @movies = Movie.all
+    @movies = Movie.search(params[:search] || nil)
   end
 
   # GET /movies/1 or /movies/1.json
@@ -67,4 +67,6 @@ class MoviesController < ApplicationController
     def movie_params
       params.require(:movie).permit(:movie, :description, :year, :director, :filming_location, :country)
     end
+
+
 end

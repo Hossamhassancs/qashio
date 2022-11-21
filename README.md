@@ -1,24 +1,13 @@
 # README
+* Ruby version: 3.1.2 , Rails version: 7.0.4
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+* System dependencies: you should install pgsql
 
 * Configuration
+ - bundle install
+ - add username and password for pgsql at "config/database.yml"
+ 
+* Database creation: at root folder of the project use rails:db:create then rails db:migrate
 
-* Database creation
+* seed movies and reviews tables by run rake task: [rake import_movies] and [rake import_reviews]
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
